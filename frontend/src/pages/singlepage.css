@@ -1,0 +1,51 @@
+.loading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h1{
+    color: white;
+}
+.outer{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box{
+    height:400px;
+    width:700px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.details{
+    background-color: white;
+    padding-left: 10px;
+    display: flex;
+    gap:10px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+}
+.poster{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    height: 450px;
+}
+img{
+    margin: 5px;
+    width: 80%;
+    height: 80%;
+}
+button{
+    margin:5px;
+}
+.hello{
+    display: none;
+}
+.bye{
+    display: block;
+}

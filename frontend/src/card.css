@@ -1,0 +1,65 @@
+.items{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap:30px;
+    align-items: center;
+    justify-content:center;
+    margin:50px;
+}
+.card{
+    margin-left:20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    background: gray;
+    height: 500px;
+    width:360px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+.card:hover{
+    margin-left:20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    background: black;
+    height: 500px;
+    width:360px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+.poster1
+{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+    width:276px;
+}
+.poster1:hover{
+    margin:0;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    height: 450px;
+    width:300px;
+}
+img{
+    height: 100%;
+    width: 100%;
+}
+.name{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.nt{
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: larger;
+}
