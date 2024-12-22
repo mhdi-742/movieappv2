@@ -29,10 +29,12 @@ const Signup = (props) => {
         <div>Signup</div>
       </div>
       <br />
+     <hr className='hhhr'></hr>
       <div className={'inputContainer'}>
+      <label htmlFor ="name">NAME</label>
         <input
           value={name}
-          placeholder="Enter your name here"
+          placeholder="Enter your name here" id="name"
           onChange={(ev) => setName(ev.target.value)}
           className={'inputBox'}
         />
@@ -42,9 +44,10 @@ const Signup = (props) => {
       <br/>
         <br/>
       <div className={'inputContainer'}>
+      <label htmlFor ="email">EMAIL</label>
         <input
           value={email}
-          placeholder="Enter your email here"
+          placeholder="Enter your email here" id="email"
           onChange={(ev) => setEmail(ev.target.value)}
           className={'inputBox'}
         />
@@ -52,9 +55,10 @@ const Signup = (props) => {
       </div>
       <br />
       <div className={'inputContainer'}>
+      <label htmlFor ="password">PASSWORD</label>
         <input
           value={password}
-          placeholder="Enter your password here"
+          placeholder="Enter your password here" id="password"
           onChange={(ev) => setPassword(ev.target.value)}
           className={'inputBox'}
         />
@@ -62,8 +66,8 @@ const Signup = (props) => {
       </div>
       <br />
       <br/>
-      <div className={'inputContainer'}>
-        <input className={'inputButton'} type="button" onClick={onButtonClick} value={'signup'} /> 
+      <div className="buttom2">
+        <button className='loog' onClick={onButtonClick}>Sing In</button>
       </div>
     </div>
     </div>

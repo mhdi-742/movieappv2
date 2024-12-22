@@ -3,12 +3,16 @@ import { useState } from 'react';
 import { NavLink, useNavigate, useParams } from 'react-router-dom'
 import './Navbar.css'
 import { useGlobalContext } from '../contex'
+import loginimg from '../../src/assets/log-in.png'
+import signedin from'../../src/assets/singed.png'
+import bookmark from'../../src/assets/bookmark.png'
 const Navbar=()=> {
-  const {query,SetQuery,isError,search,SetSearch,loged,SetLoged,fetchuser,usrename}=useGlobalContext();
+  const {query,SetQuery,isError,search,SetSearch,loged,SetLoged,fetchuser,usrename,Setusername}=useGlobalContext();
   const navigate=useNavigate();
 
   if(localStorage.getItem('token')!=null)
   {
+    Setusername(localStorage.getItem('name'));
     SetLoged(true);
   }
    useEffect(()=>{
@@ -16,6 +20,7 @@ const Navbar=()=> {
    },[loged])
   const signout=()=>{
     localStorage.removeItem('token');
+    localStorage.removeItem('name');
     SetLoged(false);
     navigate("/")
   }
@@ -26,7 +31,7 @@ const Navbar=()=> {
      <div>
     <NavLink className="active" to="/">The Movie Site</NavLink>
     </div>
-    <div className={search}>
+    <div className={search+" search-area"} >
       <form role="search" id="form" onSubmit={(e)=>e.preventDefault()}>
         <input type="search" id="query" name="q" placeholder={query} onChange={(e)=>
         {
@@ -37,9 +42,7 @@ const Navbar=()=> {
         <p className='error'>{isError.show && isError.msg}</p>
       </div>
     </div>
-    <div className='sign'>
-    <NavLink className="signin" to="/watchlist">watchlist</NavLink>
-    </div>
+    <div className="watch-button"><NavLink className="signin1" to="/watchlist" ><img className='watchlist-img' src={bookmark}></img><div className='del'>WATCHLIST</div></NavLink></div>
     <div className="dropdown"><button className="dropbtn" onClick={signout}>{usrename}</button>
   <div class="dropdown-content">
     <div onClick={signout}>SIGN OUT</div>
@@ -50,10 +53,10 @@ const Navbar=()=> {
   return (
     <div>
     <div className="topnav">
-     <div>
+     <div className='heading'>
     <NavLink className="active" to="/">The Movie Site</NavLink>
     </div>
-    <div className={search}>
+    <div className={search+" search-area"}>
       <form role="search" id="form" onSubmit={(e)=>e.preventDefault()}>
         <input type="search" id="query" name="q" placeholder={query} onChange={(e)=>
         {
@@ -65,10 +68,10 @@ const Navbar=()=> {
       </div>
     </div>
     <div className='sign'>
-    <NavLink className="signin" to="/watchlist" >watchlist</NavLink>
+    <div className="watch-button"><NavLink className="signin1" to="/watchlist" ><img className='watchlist-img' src={bookmark}></img><div className='del'>WATCHLIST</div></NavLink></div>
     </div>
     <div className='sign'>
-    <NavLink className="signin" to="/signin">Sign In</NavLink>
+      <div className="sign-in-button"><NavLink className="signin" to="/signin"><img className='signin-img' src={loginimg}></img></NavLink></div>
     </div>
     
   </div>

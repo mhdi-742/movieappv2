@@ -28,7 +28,7 @@ const Watchlist = () => {
           <div className="name"><h3 className="title">{curr.name}</h3></div>
       </div>
       </NavLink>
-      <Remove id={curr.mid}/>
+      <div className="remove"><Remove id={curr.mid}/></div>
       </div>
       
     );

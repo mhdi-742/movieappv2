@@ -18,6 +18,7 @@
     align-items: center;
     justify-content: center;
     text-decoration: none;
+    border: 2px solid white;
 }
 .card:hover{
     margin-left:20px;
@@ -30,6 +31,7 @@
     align-items: center;
     justify-content: center;
     text-decoration: none;
+    border: 2px solid white;
 }
 .poster1
 {
@@ -41,6 +43,8 @@
 }
 .poster1:hover{
     margin:0;
+    transition:ease-in;
+    transition-duration: 0.25s;
     display:flex;
     align-items: center;
     justify-content: center;
@@ -62,4 +66,9 @@ img{
     align-items: center;
     justify-content: center;
     font-size: larger;
+}
+.remove{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

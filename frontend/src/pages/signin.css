@@ -9,21 +9,29 @@
     align-items: center;
     justify-content: center;
     height: 80vh;
-    width: 800px;
-    background: rgb(204, 159, 166);
+    width: 70vh;
+    background: rgb(37, 1, 91);
   }
   
   .titleContainer {
     display: flex;
     flex-direction: column;
     font-size: 64px;
-    width:100%;
+    width:70%;
     font-weight: bolder;
     align-items: center;
     justify-content: center;
-    background-color:pink
+    color:white;
   }
-  
+  .hhhr{
+    width:100%;
+
+  }
+  .buttom2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   .resultContainer,
   .historyItem {
     flex-direction: row;
@@ -55,22 +63,33 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    background-color: aliceblue;
   }
   
   .inputContainer > .errorLabel {
     color: red;
     font-size: 12px;
   }
-  
+  label{
+    color: white;
+    margin:2px;
+  }
   .inputBox {
-    height: 48px;
-    width: 400px;
+    height: 5vh;
+    width: 30vh;
     font-size: large;
     border-radius: 8px;
-    color: black;
+    color: white;
     padding-left: 8px;
+    background-color: rgb(49, 32, 164);
   }
-  .inputButton{
+  .loog{
     background-color: blueviolet;
+    height:4vh;
+    border:1.5px white solid;
+    color: white
+  }
+  .buttom{
+    display: flex;
+    width:20vh;
+    justify-content: space-between;
   }

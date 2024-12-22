@@ -144,7 +144,7 @@ const AppProvider =({children})=>{
       },1000);
       return ()=>clearTimeout(time);
     },[query]) 
-    return <AppContext.Provider value={{movie ,isError ,isloading,SetQuery,query,search,SetSearch,fSetMovie,fmovie,fetchwatchlist,delmovies,signin,signup,fetchuser,loged,SetLoged,usrename}}>{children}</AppContext.Provider>
+    return <AppContext.Provider value={{movie ,isError ,isloading,SetQuery,query,search,SetSearch,fSetMovie,fmovie,fetchwatchlist,delmovies,signin,signup,fetchuser,loged,SetLoged,usrename,Setusername}}>{children}</AppContext.Provider>
 };
 const useGlobalContext = () => {
     return useContext(AppContext);
